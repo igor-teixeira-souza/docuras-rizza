@@ -4,7 +4,7 @@ function AddTask({onAddTaskSubmit}) {
     const [description, setDescription] = useState("");
   return (
     <div
-      className="space-y-4 bg-slate-700 p-6 bg-whi rounded-md shadow-2xl text-white flex flex-col"
+      className="space-y-10 bg-slate-700 p-6 bg-whi rounded-md shadow-2xl text-white flex flex-col"
       flex
       flex-col
       gap-2
