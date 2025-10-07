@@ -1,6 +1,7 @@
 import { useState } from "react";
+import Input from "./input";
 function AddTask({onAddTaskSubmit}) {
-    const [tittle, setTittle] = useState("");
+    const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
   return (
     <div
@@ -9,25 +10,22 @@ function AddTask({onAddTaskSubmit}) {
       flex-col
       gap-2
     >
-      <input
+      <Input
         type="text"
         placeholder="Digite o título da tarefa"
-        className="border border-slate-300 outline-slate-400 px-4 py-2 w-full" 
-        value={tittle} 
-        onChange={(event) => setTittle(event.target.value)} 
+        value={title} 
+        onChange={(event) => setTitle(event.target.value)} 
       />
-
-      <input
+      <Input
         type="text"
-        placeholder="Digite a descrição da tarefa"
-        className="border border-slate-300 outline-slate-400 px-4 py-2 w-full" 
+        placeholder="Digite a descrição da tarefa" 
         value={description}
         onChange={(event) => setDescription(event.target.value)}
       />
       <button 
       onClick={() => {
-        onAddTaskSubmit(tittle, description);
-        setTittle("");
+        onAddTaskSubmit(title, description);
+        setTitle("");
         setDescription("");
       }}
       className="bg-slate-500 text-white px-4 py-2 hover:text-black transition-colors duration-300 hover:bg-amber-50 font-medium">Adicionar
